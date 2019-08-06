@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Main {
   public static void main(String args[]) {
     Scanner s = new Scanner(System.in);
@@ -18,14 +19,14 @@ public class Main {
     int points[] = new int[m];
     for(int j=0; j<m; j++) points[j] = s.nextInt();
 
-    int ans = 0;
+    int res = 0;
     for(int j=0; j<m; j++) {
       int max = arr[j][0];
       for(int k=0; k<5; k++) {
         max = Math.max(max, arr[j][k]);
       }
-      ans = ans + max*points[j];
+      res = res + max*points[j];
     }
-    System.out.println(ans);
+    System.out.println(res);
   }
 }
